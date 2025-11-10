@@ -2,6 +2,14 @@
 
 The Kirchheimer Family Tree is a genealogical project to document and preserve the history of the Kirchheimer family and related families, including the Hanauer, Westheimer, and other family lines. This repository uses a structured, open-source approach to store, validate, and visualize family history data.
 
+## Quick Start
+
+1. Browse the data in the `family` directory
+2. Learn about the data structure in `process/data_structure` directory
+3. Read the contribution guidelines in `CONTRIBUTING.md`
+4. Use the validation tools in `process/tools/validation` directory
+5. View visualization templates in `process/visualization` directory
+
 ## Table of Contents
 1. [Repository Overview](#repository-overview)
 2. [Repository Structure](#repository-structure)
@@ -29,17 +37,36 @@ The Kirchheimer Family Tree project is designed to:
 kirchheimer-family-tree/
 ├── README.md                 # This file
 ├── CONTRIBUTING.md           # Contribution guidelines
+├── PROJECT_STRUCTURE.md      # Detailed project structure documentation
+│
 ├── family/                   # Family data directory
 │   ├── individuals/         # Individual person records
 │   ├── families/            # Family unit records
-│   ├── events/              # Significant life events
-│   ├── sources/             # Source information
-│   └── images/              # Photos and documents
-├── process/                  # Processing and documentation
-│   ├── data_structure/      # JSON schema definitions
-│   ├── documentation/       # Project documentation
-│   ├── tools/               # Processing and validation tools
-│   └── visualization/       # Visualization templates
+│   ├── media/               # Photos and documents
+│   │   ├── artifacts/       # Historical artifacts
+│   │   ├── documents/       # Documents and certificates
+│   │   └── photos/          # Family photos
+│   └── sources/             # Source information
+│
+└── process/                  # Processing and documentation
+    ├── data_structure/      # JSON schema definitions
+    │   ├── README.md                # Overview of data structure
+    │   ├── person_schema.json      # Schema for individual records
+    │   ├── family_schema.json      # Schema for family records
+    │   └── event_schema.json       # Schema for event records
+    │
+    ├── documentation/       # Project documentation
+    │   └── remote_resources_guide.md # Guide for linking to external services
+    │
+    ├── tools/               # Processing and validation tools
+    │   └── validation/      # Validation tools
+    │       ├── README.md    # Overview of validation tools
+    │       └── validate.py  # JSON schema validation script
+    │
+    └── visualization/       # Visualization templates
+        └── mermaid/         # Mermaid diagram templates
+            ├── README.md           # Overview of visualization templates
+            └── kirchheimer_templates.md # Family-specific templates
 ```
 
 ## Data Format
@@ -83,9 +110,9 @@ To ensure data quality, the repository includes validation tools in the `process
 
 The repository includes comprehensive documentation in the `process/documentation` directory:
 
-- **Data Entry Guide**: Guidelines for entering family tree data
-- **API Documentation**: Documentation for data structures
-- **Validation Tools**: Guides for using the validation tools
+- **Remote Resources Guide**: Information about linking to online genealogy services
+
+Additional documentation files may be added as needed for data entry and visualization guides.
 
 ## Contributing
 
