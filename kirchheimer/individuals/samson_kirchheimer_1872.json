@@ -1,0 +1,252 @@
+{
+  "id": "samson_kirchheimer_1872",
+  "names": {
+    "primary": {
+      "given": "Samson",
+      "surname": "Kirchheimer",
+      "maiden": "",
+      "nickname": "Sam"
+    }
+  },
+  "birth": {
+    "date": "1872-08-10",
+    "certainty": "certain",
+    "location": {
+      "city": "Berwangen",
+      "region": "Baden",
+      "country": "Germany"
+    },
+    "sources": ["kirchheimer_chart_will_001"]
+  },
+  "death": {
+    "date": "1941-12-28",
+    "certainty": "certain",
+    "location": {
+      "city": "Houston",
+      "region": "Texas",
+      "country": "USA"
+    },
+    "sources": ["kirchheimer_chart_will_001"]
+  },
+  "immigration": [
+    {
+      "date": "1889",
+      "age": 17,
+      "departure_location": {
+        "city": "Berwangen",
+        "region": "Baden",
+        "country": "Germany"
+      },
+      "arrival_location": {
+        "city": "Galveston",
+        "region": "Texas",
+        "country": "USA"
+      },
+      "reason": "Avoiding military conscription",
+      "sources": ["kirchheimer_chart_will_001"]
+    }
+  ],
+  "naturalization": [
+    {
+      "date": "1896",
+      "location": {
+        "region": "Texas",
+        "country": "USA"
+      },
+      "sources": ["kirchheimer_chart_will_001"]
+    }
+  ],
+  "occupations": [
+    {
+      "occupation": "baker",
+      "location": {
+        "city": "Sabine Pass",
+        "region": "Texas",
+        "country": "USA"
+      },
+      "period": {
+        "start": "1900",
+        "end": "1900"
+      },
+      "sources": ["kirchheimer_chart_will_001"]
+    },
+    {
+      "occupation": "grocer",
+      "location": {
+        "city": "Houston",
+        "region": "Texas", 
+        "country": "USA"
+      },
+      "period": {
+        "start": "1910",
+        "end": "1941"
+      },
+      "sources": ["kirchheimer_chart_will_001"]
+    },
+    {
+      "occupation": "motion picture theater owner",
+      "location": {
+        "address": "1016 Hogan Street",
+        "city": "Houston",
+        "region": "Texas",
+        "country": "USA"
+      },
+      "period": {
+        "start": "1917",
+        "end": "1941"
+      },
+      "business_name": "Northside Theater",
+      "sources": ["kirchheimer_chart_will_001"]
+    }
+  ],
+  "residences": [
+    {
+      "location": {
+        "city": "Galveston",
+        "region": "Texas",
+        "country": "USA"
+      },
+      "period": {
+        "start": "1889",
+        "end": "1900"
+      },
+      "sources": ["kirchheimer_chart_will_001"]
+    },
+    {
+      "location": {
+        "city": "Sabine Pass",
+        "region": "Texas",
+        "country": "USA"
+      },
+      "period": {
+        "start": "1900",
+        "end": "1910"
+      },
+      "sources": ["kirchheimer_chart_will_001"]
+    },
+    {
+      "location": {
+        "address": "1817 Chestnut Street",
+        "city": "Houston",
+        "region": "Texas",
+        "country": "USA"
+      },
+      "period": {
+        "start": "1910",
+        "end": "1941"
+      },
+      "sources": ["kirchheimer_chart_will_001"]
+    }
+  ],
+  "parents": [
+    {
+      "person_id": "moses_kirchheimer_001",
+      "relationship": "biological_father",
+      "certainty": "certain",
+      "sources": ["kirchheimer_chart_will_001"]
+    },
+    {
+      "person_id": "babette_westheimer_001",
+      "relationship": "biological_mother",
+      "certainty": "certain",
+      "sources": ["kirchheimer_chart_will_001"]
+    }
+  ],
+  "spouses": [
+    {
+      "person_id": "florence_evans_001",
+      "relationship_type": "spouse",
+      "marriage_date": "1901",
+      "certainty": "likely",
+      "sources": ["kirchheimer_chart_will_001"]
+    },
+    {
+      "person_id": "pauline_hagen_001",
+      "relationship_type": "spouse", 
+      "marriage_date": "1908",
+      "certainty": "likely",
+      "sources": ["kirchheimer_chart_will_001"]
+    }
+  ],
+  "children": [
+    {
+      "person_id": "nathan_carl_kirchheimer_1908",
+      "relationship": "biological_child",
+      "certainty": "certain",
+      "sources": ["kirchheimer_chart_will_001"]
+    },
+    {
+      "person_id": "thora_kirchheimer_001",
+      "relationship": "biological_child",
+      "certainty": "certain", 
+      "sources": ["kirchheimer_chart_will_001"]
+    },
+    {
+      "person_id": "borghild_kirchheimer_001",
+      "relationship": "biological_child",
+      "certainty": "certain",
+      "sources": ["kirchheimer_chart_will_001"]
+    },
+    {
+      "person_id": "joseph_kirchheimer_1916",
+      "relationship": "biological_child",
+      "certainty": "certain",
+      "sources": ["kirchheimer_chart_will_001"]
+    },
+    {
+      "person_id": "theodore_r_kirchheimer_001",
+      "relationship": "biological_child",
+      "certainty": "certain",
+      "sources": ["kirchheimer_chart_will_001"]
+    }
+  ],
+  "historical_events": [
+    {
+      "event": "1900 Galveston Hurricane",
+      "date": "1900-09-08",
+      "description": "Survived the devastating hurricane and helped with cleanup efforts including collecting bodies on the beach",
+      "location": {
+        "city": "Galveston",
+        "region": "Texas",
+        "country": "USA"
+      },
+      "sources": ["kirchheimer_chart_will_001"]
+    }
+  ],
+  "business_ventures": [
+    {
+      "business_name": "Northside Theater",
+      "type": "Motion picture house",
+      "location": {
+        "address": "1016 Hogan Street",
+        "city": "Houston",
+        "region": "Texas",
+        "country": "USA"
+      },
+      "period": {
+        "start": "1917",
+        "end": "1941"
+      },
+      "description": "First movie house in Houston outside of downtown vaudeville district",
+      "sources": ["kirchheimer_chart_will_001"]
+    }
+  ],
+  "burial": {
+    "location": {
+      "cemetery": "Hollywood Cemetery",
+      "address": "3506 N. Main Street",
+      "city": "Houston",
+      "region": "Texas",
+      "country": "USA"
+    },
+    "sources": ["kirchheimer_chart_will_001"]
+  },
+  "notes": [
+    "Emigrated at age 17 to avoid military conscription in Germany",
+    "Worked as baker in brother Nathan's restaurant in Sabine Pass",
+    "Owned first neighborhood movie theater in Houston outside downtown",
+    "Known for allowing children to enter theater for free after selling tickets",
+    "Annual income of $6000 in 1930 (equivalent to about $63,000 in 2000)"
+  ],
+  "sources": ["kirchheimer_chart_will_001"]
+}

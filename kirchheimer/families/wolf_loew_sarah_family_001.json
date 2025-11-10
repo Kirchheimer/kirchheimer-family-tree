@@ -1,0 +1,165 @@
+{
+  "id": "wolf_loew_sarah_family_001",
+  "family_name": "Loew Family",
+  "partners": [
+    {
+      "person_id": "wolf_loew_001",
+      "role": "husband",
+      "certainty": "certain"
+    },
+    {
+      "person_id": "sarah_unknown_001",
+      "role": "wife", 
+      "certainty": "likely"
+    }
+  ],
+  "marriage": {
+    "date": "1720",
+    "certainty": "likely",
+    "location": {
+      "region": "Baden",
+      "country": "Germany"
+    },
+    "sources": ["kirchheimer_chart_will_001"]
+  },
+  "children": [
+    {
+      "person_id": "nathan_levi_wolf_001",
+      "birth_order": 3,
+      "certainty": "certain",
+      "sources": ["kirchheimer_chart_will_001"]
+    },
+    {
+      "person_id": "schoenle_wolf_001",
+      "birth_order": 1,
+      "certainty": "certain",
+      "sources": ["kirchheimer_chart_will_001"]
+    },
+    {
+      "person_id": "joseph_loew_001",
+      "birth_order": 2,
+      "certainty": "certain", 
+      "sources": ["kirchheimer_chart_will_001"]
+    }
+  ],
+  "residences": [
+    {
+      "location": {
+        "city": "Berwangen",
+        "region": "Baden",
+        "country": "Germany"
+      },
+      "period": {
+        "start": "1723",
+        "end": "1724"
+      },
+      "sources": ["kirchheimer_chart_will_001"]
+    },
+    {
+      "location": {
+        "city": "Kirchardt",
+        "region": "Baden",
+        "country": "Germany"
+      },
+      "period": {
+        "start": "1724",
+        "end": "1744"
+      },
+      "sources": ["kirchheimer_chart_will_001"]
+    },
+    {
+      "location": {
+        "city": "Berwangen",
+        "region": "Baden", 
+        "country": "Germany"
+      },
+      "period": {
+        "start": "1744",
+        "end": "1795"
+      },
+      "sources": ["kirchheimer_chart_will_001"]
+    }
+  ],
+  "family_events": [
+    {
+      "event_type": "census",
+      "date": "1723",
+      "description": "First record showing Wolf age 25, wife Sarah age 22 in Berwangen census of Jews",
+      "location": {
+        "city": "Berwangen",
+        "region": "Baden",
+        "country": "Germany"
+      },
+      "sources": ["kirchheimer_chart_will_001"]
+    },
+    {
+      "event_type": "legal_status",
+      "date": "1724",
+      "description": "Wolf received letter of protection (Schutzbrief) in Kirchardt, described as 'Wolf Loew of Berwangen'",
+      "location": {
+        "city": "Kirchardt",
+        "region": "Baden",
+        "country": "Germany"
+      },
+      "sources": ["kirchheimer_chart_will_001"]
+    },
+    {
+      "event_type": "property_transaction",
+      "date": "1766",
+      "description": "Wolf sold half house to youngest son Nathan Levi",
+      "location": {
+        "city": "Berwangen",
+        "region": "Baden",
+        "country": "Germany"
+      },
+      "sources": ["kirchheimer_chart_will_001"]
+    }
+  ],
+  "occupations": [
+    {
+      "occupation": "livestock dealer",
+      "period": {
+        "start": "1723",
+        "end": "1795"
+      },
+      "locations": [
+        {
+          "city": "Kirchardt",
+          "region": "Baden",
+          "country": "Germany"
+        },
+        {
+          "city": "Berwangen", 
+          "region": "Baden",
+          "country": "Germany"
+        }
+      ]
+    },
+    {
+      "occupation": "grain merchant",
+      "period": {
+        "start": "1723",
+        "end": "1795"
+      },
+      "locations": [
+        {
+          "city": "Kirchardt",
+          "region": "Baden",
+          "country": "Germany"
+        },
+        {
+          "city": "Berwangen",
+          "region": "Baden", 
+          "country": "Germany"
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Only Jewish family in Kirchardt for 20 years (1724-1744)",
+    "Property worth 500-600 florins in 1724",
+    "Dealt livestock at market in Treschklingen",
+    "Wolf continued paying water and pasture fees until 1772, last record of him"
+  ],
+  "sources": ["kirchheimer_chart_will_001"]
+}

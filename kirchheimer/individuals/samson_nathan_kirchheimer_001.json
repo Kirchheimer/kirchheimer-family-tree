@@ -1,0 +1,128 @@
+{
+  "id": "samson_nathan_kirchheimer_001",
+  "names": {
+    "primary": {
+      "given": "Samson Nathan",
+      "surname": "Kirchheimer",
+      "maiden": "",
+      "nickname": "Schimschon Natan"
+    }
+  },
+  "birth": {
+    "date": "1772-10-15",
+    "certainty": "certain",
+    "location": {
+      "city": "Berwangen",
+      "region": "Baden",
+      "country": "Germany"
+    },
+    "sources": ["kirchheimer_chart_will_001"]
+  },
+  "death": {
+    "date": "1855-09-03",
+    "certainty": "certain", 
+    "location": {
+      "city": "Berwangen",
+      "region": "Baden",
+      "country": "Germany"
+    },
+    "sources": ["kirchheimer_chart_will_001"]
+  },
+  "occupations": [
+    {
+      "occupation": "cattle merchant",
+      "location": {
+        "city": "Berwangen",
+        "region": "Baden",
+        "country": "Germany"
+      },
+      "period": {
+        "start": "1798",
+        "end": "1855"
+      },
+      "sources": ["kirchheimer_chart_will_001"]
+    },
+    {
+      "occupation": "grain merchant", 
+      "location": {
+        "city": "Berwangen",
+        "region": "Baden",
+        "country": "Germany"
+      },
+      "period": {
+        "start": "1798",
+        "end": "1855"
+      },
+      "sources": ["kirchheimer_chart_will_001"]
+    }
+  ],
+  "parents": [
+    {
+      "person_id": "nathan_levi_wolf_001",
+      "relationship": "biological_father",
+      "certainty": "certain",
+      "sources": ["kirchheimer_chart_will_001"]
+    },
+    {
+      "person_id": "unknown_leb_001",
+      "relationship": "biological_mother",
+      "certainty": "likely",
+      "sources": ["kirchheimer_chart_will_001"]
+    }
+  ],
+  "spouses": [
+    {
+      "person_id": "bluem_loew_001",
+      "relationship_type": "spouse",
+      "marriage_date": "1798-09",
+      "certainty": "certain",
+      "location": {
+        "city": "Berwangen",
+        "region": "Baden",
+        "country": "Germany"
+      },
+      "sources": ["kirchheimer_chart_will_001"]
+    }
+  ],
+  "children": [
+    {
+      "person_id": "nathan_kirchheimer_001",
+      "relationship": "biological_child",
+      "certainty": "certain",
+      "sources": ["kirchheimer_chart_will_001"]
+    },
+    {
+      "person_id": "moses_kirchheimer_001",
+      "relationship": "biological_child", 
+      "certainty": "certain",
+      "sources": ["kirchheimer_chart_will_001"]
+    }
+  ],
+  "legal_status": [
+    {
+      "status": "protected citizen",
+      "date": "1798-09",
+      "location": {
+        "city": "Berwangen", 
+        "region": "Baden",
+        "country": "Germany"
+      },
+      "sources": ["kirchheimer_chart_will_001"]
+    }
+  ],
+  "name_changes": [
+    {
+      "date": "1809",
+      "old_name": "Schimschon Natan", 
+      "new_name": "Samson Nathan Kirchheimer",
+      "reason": "Napoleonic requirement for permanent surnames for Jews",
+      "sources": ["kirchheimer_chart_will_001"]
+    }
+  ],
+  "notes": [
+    "Received protected citizen status in Berwangen in September 1798",
+    "First in family line to officially adopt Kirchheimer surname in 1809",
+    "Hebrew name: Schimschon Natan"
+  ],
+  "sources": ["kirchheimer_chart_will_001"]
+}

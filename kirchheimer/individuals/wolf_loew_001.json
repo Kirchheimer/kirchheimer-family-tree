@@ -1,0 +1,155 @@
+{
+  "id": "wolf_loew_001",
+  "names": {
+    "primary": {
+      "given": "Wolf",
+      "surname": "Loew",
+      "maiden": "",
+      "nickname": ""
+    },
+    "alternative": [
+      {
+        "given": "Wolf",
+        "surname": "Levi",
+        "type": "patronymic",
+        "period": {
+          "start": "1695",
+          "end": "1809"
+        }
+      }
+    ]
+  },
+  "birth": {
+    "date": "1695",
+    "date_range": {
+      "start": "1690",
+      "end": "1700"
+    },
+    "certainty": "likely",
+    "location": {
+      "city": "Muehringen",
+      "region": "Baden-Wurttemberg", 
+      "country": "Germany"
+    },
+    "sources": ["kirchheimer_chart_will_001"]
+  },
+  "death": {
+    "date": "1795",
+    "date_range": {
+      "start": "1790",
+      "end": "1800"
+    },
+    "certainty": "likely",
+    "location": {
+      "city": "Berwangen",
+      "region": "Baden",
+      "country": "Germany"
+    },
+    "sources": ["kirchheimer_chart_will_001"]
+  },
+  "occupations": [
+    {
+      "occupation": "grain merchant",
+      "location": {
+        "city": "Kirchardt",
+        "region": "Baden",
+        "country": "Germany"
+      },
+      "period": {
+        "start": "1724",
+        "end": "1744"
+      },
+      "sources": ["kirchheimer_chart_will_001"]
+    },
+    {
+      "occupation": "cattle merchant",
+      "location": {
+        "city": "Berwangen",
+        "region": "Baden", 
+        "country": "Germany"
+      },
+      "period": {
+        "start": "1744",
+        "end": "1772"
+      },
+      "sources": ["kirchheimer_chart_will_001"]
+    }
+  ],
+  "residences": [
+    {
+      "location": {
+        "city": "Berwangen",
+        "region": "Baden",
+        "country": "Germany"
+      },
+      "period": {
+        "start": "1723",
+        "end": "1724"
+      },
+      "sources": ["kirchheimer_chart_will_001"]
+    },
+    {
+      "location": {
+        "city": "Kirchardt",
+        "region": "Baden",
+        "country": "Germany"
+      },
+      "period": {
+        "start": "1724",
+        "end": "1744"
+      },
+      "sources": ["kirchheimer_chart_will_001"]
+    },
+    {
+      "location": {
+        "city": "Berwangen",
+        "region": "Baden",
+        "country": "Germany"
+      },
+      "period": {
+        "start": "1744",
+        "end": "1795"
+      },
+      "sources": ["kirchheimer_chart_will_001"]
+    }
+  ],
+  "spouses": [
+    {
+      "person_id": "sarah_unknown_001",
+      "relationship_type": "spouse",
+      "marriage_date": "1720",
+      "certainty": "likely",
+      "sources": ["kirchheimer_chart_will_001"]
+    }
+  ],
+  "children": [
+    {
+      "person_id": "nathan_levi_wolf_001",
+      "relationship": "biological_child",
+      "certainty": "certain",
+      "sources": ["kirchheimer_chart_will_001"]
+    },
+    {
+      "person_id": "schoenle_wolf_001", 
+      "relationship": "biological_child",
+      "certainty": "certain",
+      "sources": ["kirchheimer_chart_will_001"]
+    },
+    {
+      "person_id": "joseph_loew_001",
+      "relationship": "biological_child", 
+      "certainty": "certain",
+      "sources": ["kirchheimer_chart_will_001"]
+    }
+  ],
+  "notes": [
+    "First definite record was in 1723 census of Jews in Berwangen showing him at age 25",
+    "Moved to Kirchardt in 1724 where he was the only Jewish family for 20 years", 
+    "Property worth 500-600 florins in 1724",
+    "Dealt in livestock at market in Treschklingen",
+    "Returned to Berwangen in 1744",
+    "Sold half house to son Nathan Levi in 1766",
+    "Last record of paying water and pasture fees in 1772"
+  ],
+  "sources": ["kirchheimer_chart_will_001"]
+}

@@ -1,0 +1,142 @@
+{
+  "id": "nathan_levi_wolf_001",
+  "names": {
+    "primary": {
+      "given": "Nathan",
+      "surname": "Kirchheimer",
+      "maiden": "",
+      "nickname": ""
+    },
+    "alternative": [
+      {
+        "given": "Nathan",
+        "surname": "Levi Wolf",
+        "type": "birth_name",
+        "period": {
+          "start": "1729",
+          "end": "1809"
+        }
+      },
+      {
+        "given": "Nathan",
+        "surname": "Wolf",
+        "type": "patronymic",
+        "period": {
+          "start": "1729",
+          "end": "1809"
+        }
+      },
+      {
+        "given": "Nathan",
+        "surname": "Loew", 
+        "type": "patronymic",
+        "period": {
+          "start": "1729",
+          "end": "1809"
+        }
+      }
+    ]
+  },
+  "birth": {
+    "date": "1729",
+    "certainty": "likely",
+    "location": {
+      "city": "Kirchardt",
+      "region": "Baden-Wurttemberg",
+      "country": "Germany"
+    },
+    "sources": ["kirchheimer_chart_will_001"]
+  },
+  "death": {
+    "date": "1795",
+    "date_range": {
+      "start": "1790",
+      "end": "1808"
+    },
+    "certainty": "likely",
+    "location": {
+      "city": "Berwangen",
+      "region": "Baden",
+      "country": "Germany"
+    },
+    "sources": ["kirchheimer_chart_will_001"]
+  },
+  "occupations": [
+    {
+      "occupation": "cattle merchant",
+      "location": {
+        "city": "Berwangen",
+        "region": "Baden",
+        "country": "Germany"
+      },
+      "period": {
+        "start": "1766",
+        "end": "1795"
+      },
+      "sources": ["kirchheimer_chart_will_001"]
+    },
+    {
+      "occupation": "grain merchant",
+      "location": {
+        "city": "Berwangen", 
+        "region": "Baden",
+        "country": "Germany"
+      },
+      "period": {
+        "start": "1766",
+        "end": "1795"
+      },
+      "sources": ["kirchheimer_chart_will_001"]
+    }
+  ],
+  "parents": [
+    {
+      "person_id": "wolf_loew_001",
+      "relationship": "biological_father",
+      "certainty": "certain",
+      "sources": ["kirchheimer_chart_will_001"]
+    },
+    {
+      "person_id": "sarah_unknown_001",
+      "relationship": "biological_mother",
+      "certainty": "likely",
+      "sources": ["kirchheimer_chart_will_001"]
+    }
+  ],
+  "children": [
+    {
+      "person_id": "samson_nathan_kirchheimer_001",
+      "relationship": "biological_child",
+      "certainty": "certain",
+      "sources": ["kirchheimer_chart_will_001"]
+    }
+  ],
+  "property_transactions": [
+    {
+      "date": "1766",
+      "type": "purchase",
+      "description": "Purchased half house from father Wolf Loew",
+      "location": {
+        "city": "Berwangen",
+        "region": "Baden",
+        "country": "Germany"
+      },
+      "sources": ["kirchheimer_chart_will_001"]
+    }
+  ],
+  "name_changes": [
+    {
+      "date": "1809",
+      "old_name": "Nathan Levi Wolf",
+      "new_name": "Nathan Kirchheimer",
+      "reason": "Napoleonic requirement for permanent surnames for Jews",
+      "sources": ["kirchheimer_chart_will_001"]
+    }
+  ],
+  "notes": [
+    "Father's youngest son",
+    "Purchased half house from father in 1766",
+    "Name changed from Nathan Levi Wolf to Nathan Kirchheimer in 1809 under Napoleonic law requiring Jews to take permanent surnames"
+  ],
+  "sources": ["kirchheimer_chart_will_001"]
+}

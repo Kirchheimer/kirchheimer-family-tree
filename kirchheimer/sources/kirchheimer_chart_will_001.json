@@ -1,0 +1,106 @@
+{
+  "id": "kirchheimer_chart_will_001",
+  "title": "KIRCHHEIMER CHART for Will",
+  "type": "family_genealogy_research",
+  "date": "2013-03-17",
+  "author": "Hanna Kirchheimer Grossman",
+  "description": "Comprehensive genealogical chart and historical research covering the Kirchheimer family from earliest trackable ancestor Wolf Loew (c.1695) through American immigration and beyond, including related families (Hanauer, Westheimer, etc.)",
+  "format": "text_document",
+  "language": "English",
+  "location": {
+    "repository": "scratch source documents",
+    "file": "KIRCHHEIMER CHART for Will.txt"
+  },
+  "content_summary": [
+    "Translation of article about Hilde Rosenfeld Kirchheimer from 'Zu Recht wieder Anwalt. Jüdische Rechtsanwälte aus Berlin nach 1945'",
+    "Descent chart for Kirchheimer family of Houston, Texas",
+    "Detailed genealogical information on Wolf Loew (c.1695-1795) and descendants",
+    "Hanauer family lineage from Naftali (Nathan) Herz Hanauer",
+    "Westheimer family connections through Joseph Aron Westheimer",
+    "American immigration records and family development in Texas",
+    "Historical context including European Jewish history, laws, and persecutions",
+    "Detailed biographical information on multiple generations",
+    "Legal and business records from various time periods",
+    "Census and immigration records"
+  ],
+  "geographic_coverage": [
+    {
+      "location": {
+        "city": "Berwangen",
+        "region": "Baden",
+        "country": "Germany"
+      },
+      "time_period": {
+        "start": "1723",
+        "end": "1940"
+      }
+    },
+    {
+      "location": {
+        "city": "Kirchardt", 
+        "region": "Baden-Wurttemberg",
+        "country": "Germany"
+      },
+      "time_period": {
+        "start": "1724",
+        "end": "1744"
+      }
+    },
+    {
+      "location": {
+        "city": "Houston",
+        "region": "Texas",
+        "country": "USA"
+      },
+      "time_period": {
+        "start": "1889",
+        "end": "2013"
+      }
+    },
+    {
+      "location": {
+        "city": "Galveston",
+        "region": "Texas", 
+        "country": "USA"
+      },
+      "time_period": {
+        "start": "1889",
+        "end": "1941"
+      }
+    }
+  ],
+  "time_period": {
+    "start": "1695",
+    "end": "2013"
+  },
+  "families_covered": [
+    "Kirchheimer",
+    "Hanauer", 
+    "Westheimer",
+    "Loew/Levi",
+    "Rosenfeld",
+    "Hagen"
+  ],
+  "key_individuals": [
+    "Wolf Loew (c.1695-1795)",
+    "Nathan Levi Wolf/Nathan Kirchheimer (1729-1808)",
+    "Samson Nathan Kirchheimer (1772-1855)",
+    "Moses Kirchheimer (1835-1893)",
+    "Samson Kirchheimer (1872-1941)",
+    "Joseph Kirchheimer (1916-1970)",
+    "Hilde Rosenfeld Kirchheimer (1905-1959)"
+  ],
+  "reliability": "high",
+  "notes": [
+    "Contains extensive research by family genealogist Hanna Kirchheimer Grossman",
+    "Includes translation of German biographical article",
+    "Contains detailed historical context and documentation",
+    "Cross-references multiple historical records and sources",
+    "Covers approximately 318 years of family history",
+    "Includes both European and American family branches"
+  ],
+  "repository_info": {
+    "collection": "Kirchheimer Family Archives",
+    "access": "family_private"
+  }
+}
