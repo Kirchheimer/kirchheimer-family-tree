@@ -1,0 +1,165 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Kirchheimer Event Schema",
+  "type": "object",
+  "description": "Schema for storing significant life events in the Kirchheimer family tree",
+  "required": ["id", "type", "event_name", "date"],
+  "additionalProperties": true,
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for this event"
+    },
+    "GEDCOM_id": {
+      "type": "string",
+      "description": "Corresponding event ID in GEDCOM format, for compatibility"
+    },
+    "type": {
+      "type": "string",
+      "enum": ["religious", "legal", "medical", "social", "political", "natural", "other"],
+      "description": "Category of the event"
+    },
+    "event_name": {
+      "type": "string",
+      "description": "Name or description of the event"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of the event in ISO 8601 format (YYYY-MM-DD)"
+    },
+    "date_range": {
+      "type": "object",
+      "properties": {
+        "start": {"type": "string", "format": "date"},
+        "end": {"type": "string", "format": "date"}
+      },
+      "description": "If event spans multiple dates, provide a range"
+    },
+    "location": {
+      "type": "object",
+      "description": "Location information for the event",
+      "properties": {
+        "place": {"type": "string", "description": "Name of place"},
+        "address": {"type": "string", "description": "Specific address if known"},
+        "city": {"type": "string", "description": "City or town"},
+        "region": {"type": "string", "description": "State, province, or region"},
+        "country": {"type": "string", "description": "Country"},
+        "coordinates": {
+          "type": "object",
+          "properties": {
+            "lat": {"type": "number"},
+            "lon": {"type": "number"}
+          }
+        }
+      }
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed description of the event"
+    },
+    "participants": {
+      "type": "array",
+      "description": "People who participated in this event",
+      "items": {
+        "type": "object",
+        "properties": {
+          "person_id": {
+            "type": "string",
+            "description": "Reference to the participant's person record"
+          },
+          "role": {
+            "type": "string",
+            "description": "Role or part they played in the event"
+          },
+          "notes": {
+            "type": "string",
+            "description": "Additional information about their participation"
+          }
+        }
+      }
+    },
+    "related_families": {
+      "type": "array",
+      "description": "Families that this event is related to",
+      "items": {
+        "type": "object",
+        "properties": {
+          "family_id": {
+            "type": "string",
+            "description": "Reference to the related family record"
+          },
+          "relationship": {
+            "type": "string",
+            "description": "How the event relates to the family"
+          }
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "description": "References to source documents for this event",
+      "items": {"type": "string"}
+    },
+    "certainty": {
+      "type": "string",
+      "enum": ["certain", "very_likely", "likely", "uncertain"],
+      "description": "How certain we are about this information"
+    },
+    "media": {
+      "type": "array",
+      "description": "Media associated with this event",
+      "items": {
+        "type": "object",
+        "properties": {
+          "media_id": {
+            "type": "string",
+            "description": "Reference to media record"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of how this media relates to the event"
+          }
+        }
+      }
+    },
+    "impact": {
+      "type": "string",
+      "description": "How this event impacted the person(s) or family"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional notes about this event"
+    },
+    "remote_resources": {
+      "type": "array",
+      "description": "Links to external genealogy services and resources",
+      "items": {
+        "type": "object",
+        "required": ["resource_type", "resource_id", "url"],
+        "properties": {
+          "resource_type": {
+            "type": "string",
+            "description": "The type of resource (e.g., FamilySearch, MyHeritage, etc.)"
+          },
+          "resource_id": {
+            "type": "string",
+            "description": "The identifier of the resource"
+          },
+          "title": {
+            "type": "string",
+            "description": "The title of the resource"
+          },
+          "url": {
+            "type": "string",
+            "description": "The URL to the resource"
+          },
+          "note": {
+            "type": "string",
+            "description": "Optional notes about the resource"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,278 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Kirchheimer Family Schema",
+  "type": "object",
+  "description": "Schema for storing family unit data in the Kirchheimer family tree",
+  "required": ["id", "partners", "children"],
+  "additionalProperties": true,
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for this family unit"
+    },
+    "GEDCOM_id": {
+      "type": "string",
+      "description": "Corresponding family ID in GEDCOM format, for compatibility"
+    },
+    "partners": {
+      "type": "array",
+      "description": "Partners in this family unit",
+      "items": {
+        "type": "object",
+        "properties": {
+          "person_id": {
+            "type": "string",
+            "description": "Reference to the partner's person record"
+          },
+          "relationship_type": {
+            "type": "string",
+            "enum": ["spouse", "partner", "common_law", "same_sex_partner"]
+          }
+        }
+      }
+    },
+    "children": {
+      "type": "array",
+      "description": "Children in this family",
+      "items": {
+        "type": "object",
+        "properties": {
+          "person_id": {
+            "type": "string",
+            "description": "Reference to the child's person record"
+          },
+          "birth_order": {
+            "type": "integer",
+            "description": "Order of birth among siblings"
+          },
+          "relationship": {
+            "type": "string",
+            "enum": ["biological", "adopted", "step", "foster", "other"]
+          },
+          "certainty": {
+            "type": "string",
+            "enum": ["certain", "very_likely", "likely", "uncertain"]
+          }
+        }
+      }
+    },
+    "marriage": {
+      "type": "object",
+      "description": "Marriage information for the partners",
+      "properties": {
+        "date": {
+          "type": "string",
+          "format": "date",
+          "description": "Marriage date in ISO 8601 format (YYYY-MM-DD)"
+        },
+        "date_range": {
+          "type": "object",
+          "properties": {
+            "start": {"type": "string", "format": "date"},
+            "end": {"type": "string", "format": "date"}
+          }
+        },
+        "location": {
+          "type": "object",
+          "description": "Marriage location information",
+          "properties": {
+            "place": {"type": "string"},
+            "address": {"type": "string"},
+            "city": {"type": "string"},
+            "region": {"type": "string"},
+            "country": {"type": "string"}
+          }
+        },
+        "notes": {
+          "type": "string",
+          "description": "Additional notes about the marriage"
+        },
+        "sources": {
+          "type": "array",
+          "description": "References to source documents",
+          "items": {"type": "string"}
+        },
+        "certainty": {
+          "type": "string",
+          "enum": ["certain", "very_likely", "likely", "uncertain"]
+        }
+      }
+    },
+    "divorce": {
+      "type": "object",
+      "description": "Divorce information (if applicable)",
+      "properties": {
+        "date": {
+          "type": "string",
+          "format": "date",
+          "description": "Divorce date in ISO 8601 format (YYYY-MM-DD)"
+        },
+        "date_range": {
+          "type": "object",
+          "properties": {
+            "start": {"type": "string", "format": "date"},
+            "end": {"type": "string", "format": "date"}
+          }
+        },
+        "location": {
+          "type": "object",
+          "description": "Divorce location information",
+          "properties": {
+            "place": {"type": "string"},
+            "city": {"type": "string"},
+            "region": {"type": "string"},
+            "country": {"type": "string"}
+          }
+        },
+        "reason": {
+          "type": "string",
+          "description": "Reason for divorce, if known"
+        },
+        "notes": {
+          "type": "string",
+          "description": "Additional notes about the divorce"
+        },
+        "sources": {
+          "type": "array",
+          "description": "References to source documents",
+          "items": {"type": "string"}
+        },
+        "certainty": {
+          "type": "string",
+          "enum": ["certain", "very_likely", "likely", "uncertain"]
+        }
+      }
+    },
+    "residence": {
+      "type": "array",
+      "description": "Periods when this family resided together",
+      "items": {
+        "type": "object",
+        "properties": {
+          "date_range": {
+            "type": "object",
+            "properties": {
+              "start": {"type": "string", "format": "date"},
+              "end": {"type": "string", "format": "date"}
+            }
+          },
+          "location": {
+            "type": "object",
+            "description": "Residence location information",
+            "properties": {
+              "place": {"type": "string"},
+              "address": {"type": "string"},
+              "city": {"type": "string"},
+              "region": {"type": "string"},
+              "country": {"type": "string"}
+            }
+          },
+          "notes": {
+            "type": "string",
+            "description": "Additional notes about the residence"
+          },
+          "sources": {
+            "type": "array",
+            "description": "References to source documents",
+            "items": {"type": "string"}
+          },
+          "certainty": {
+            "type": "string",
+            "enum": ["certain", "very_likely", "likely", "uncertain"]
+          }
+        }
+      }
+    },
+    "events": {
+      "type": "array",
+      "description": "Significant family events",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": ["religious", "legal", "medical", "social", "political", "natural", "other"]
+          },
+          "event_name": {
+            "type": "string",
+            "description": "Name or description of the event"
+          },
+          "date": {
+            "type": "string",
+            "format": "date",
+            "description": "Date of the event"
+          },
+          "date_range": {
+            "type": "object",
+            "properties": {
+              "start": {"type": "string", "format": "date"},
+              "end": {"type": "string", "format": "date"}
+            }
+          },
+          "location": {
+            "type": "object",
+            "description": "Location of the event",
+            "properties": {
+              "place": {"type": "string"},
+              "city": {"type": "string"},
+              "region": {"type": "string"},
+              "country": {"type": "string"}
+            }
+          },
+          "description": {
+            "type": "string",
+            "description": "Detailed description of the event"
+          },
+          "sources": {
+            "type": "array",
+            "description": "References to source documents",
+            "items": {"type": "string"}
+          },
+          "certainty": {
+            "type": "string",
+            "enum": ["certain", "very_likely", "likely", "uncertain"]
+          }
+        }
+      }
+    },
+    "notes": {
+      "type": "string",
+      "description": "General notes about this family unit"
+    },
+    "sources": {
+      "type": "array",
+      "description": "General sources for this family's information",
+      "items": {"type": "string"}
+    },
+    "remote_resources": {
+      "type": "array",
+      "description": "Links to external genealogy services and resources",
+      "items": {
+        "type": "object",
+        "required": ["resource_type", "resource_id", "url"],
+        "properties": {
+          "resource_type": {
+            "type": "string",
+            "description": "The type of resource (e.g., FamilySearch, MyHeritage, etc.)"
+          },
+          "resource_id": {
+            "type": "string",
+            "description": "The identifier of the resource"
+          },
+          "title": {
+            "type": "string",
+            "description": "The title of the resource"
+          },
+          "url": {
+            "type": "string",
+            "description": "The URL to the resource"
+          },
+          "note": {
+            "type": "string",
+            "description": "Optional notes about the resource"
+          }
+        }
+      }
+    }
+  }
+}

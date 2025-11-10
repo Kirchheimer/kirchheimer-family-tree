@@ -1,0 +1,675 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Kirchheimer Person Schema",
+  "type": "object",
+  "description": "Schema for storing individual person data in the Kirchheimer family tree",
+  "required": ["id", "names"],
+  "additionalProperties": true,
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for this person"
+    },
+    "privacy_level": {
+      "type": "string",
+      "enum": ["public", "family_only", "private"],
+      "description": "How much information about this person is publicly viewable"
+    },
+    "names": {
+      "type": "object",
+      "description": "Name information for this person",
+      "required": ["primary"],
+      "properties": {
+        "primary": {
+          "type": "object",
+          "properties": {
+            "given": {
+              "type": "string",
+              "description": "Given or first name"
+            },
+            "surname": {
+              "type": "string",
+              "description": "Family or last name"
+            },
+            "maiden": {
+              "type": "string",
+              "description": "Maiden name (for married women)"
+            },
+            "nickname": {
+              "type": "string",
+              "description": "Commonly used nickname"
+            }
+          },
+          "required": ["given", "surname"]
+        },
+        "alternative": {
+          "type": "array",
+          "description": "Other names this person is known by",
+          "items": {
+            "type": "object",
+            "properties": {
+              "given": {"type": "string"},
+              "surname": {"type": "string"},
+              "type": {
+                "type": "string",
+                "enum": ["maiden", "hebrew", "germanic", "anglicized", "other"]
+              },
+              "period": {
+                "type": "object",
+                "properties": {
+                  "start": {"type": "string", "format": "date"},
+                  "end": {"type": "string", "format": "date"}
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "gender": {
+      "type": "string",
+      "enum": ["male", "female", "other", "unknown"],
+      "description": "Gender of the person"
+    },
+    "birth": {
+      "type": "object",
+      "description": "Birth information",
+      "properties": {
+        "date": {
+          "type": "string",
+          "format": "date",
+          "description": "Birth date in ISO 8601 format (YYYY-MM-DD), or approximate like 1900-03-15? for circa"
+        },
+        "date_range": {
+          "type": "object",
+          "properties": {
+            "start": {"type": "string", "format": "date"},
+            "end": {"type": "string", "format": "date"}
+          },
+          "description": "If birth date is uncertain, provide a range"
+        },
+        "location": {
+          "type": "object",
+          "description": "Birth location information",
+          "properties": {
+            "place": {"type": "string", "description": "Name of place"},
+            "address": {"type": "string", "description": "Specific address if known"},
+            "city": {"type": "string", "description": "City or town"},
+            "region": {"type": "string", "description": "State, province, or region"},
+            "country": {"type": "string", "description": "Country"},
+            "coordinates": {
+              "type": "object",
+              "properties": {
+                "lat": {"type": "number"},
+                "lon": {"type": "number"}
+              }
+            }
+          }
+        },
+        "notes": {
+          "type": "string",
+          "description": "Additional notes about the birth"
+        },
+        "sources": {
+          "type": "array",
+          "description": "References to source documents",
+          "items": {"type": "string"}
+        },
+        "certainty": {
+          "type": "string",
+          "enum": ["certain", "very_likely", "likely", "uncertain"],
+          "description": "How certain we are about this information"
+        }
+      }
+    },
+    "death": {
+      "type": "object",
+      "description": "Death information (if applicable)",
+      "properties": {
+        "date": {
+          "type": "string",
+          "format": "date",
+          "description": "Death date in ISO 8601 format (YYYY-MM-DD), or approximate"
+        },
+        "date_range": {
+          "type": "object",
+          "properties": {
+            "start": {"type": "string", "format": "date"},
+            "end": {"type": "string", "format": "date"}
+          }
+        },
+        "location": {
+          "type": "object",
+          "description": "Death location information",
+          "properties": {
+            "place": {"type": "string"},
+            "address": {"type": "string"},
+            "city": {"type": "string"},
+            "region": {"type": "string"},
+            "country": {"type": "string"},
+            "coordinates": {
+              "type": "object",
+              "properties": {
+                "lat": {"type": "number"},
+                "lon": {"type": "number"}
+              }
+            }
+          }
+        },
+        "cause": {
+          "type": "string",
+          "description": "Cause of death, if known"
+        },
+        "notes": {
+          "type": "string",
+          "description": "Additional notes about the death"
+        },
+        "sources": {
+          "type": "array",
+          "description": "References to source documents",
+          "items": {"type": "string"}
+        },
+        "certainty": {
+          "type": "string",
+          "enum": ["certain", "very_likely", "likely", "uncertain"],
+          "description": "How certain we are about this information"
+        }
+      }
+    },
+    "burial": {
+      "type": "object",
+      "description": "Burial information (if applicable)",
+      "properties": {
+        "date": {
+          "type": "string",
+          "format": "date",
+          "description": "Burial date in ISO 8601 format (YYYY-MM-DD), or approximate"
+        },
+        "location": {
+          "type": "object",
+          "description": "Burial location information",
+          "properties": {
+            "place": {"type": "string"},
+            "address": {"type": "string"},
+            "city": {"type": "string"},
+            "region": {"type": "string"},
+            "country": {"type": "string"},
+            "coordinates": {
+              "type": "object",
+              "properties": {
+                "lat": {"type": "number"},
+                "lon": {"type": "number"}
+              }
+            }
+          }
+        },
+        "cemetery_name": {
+          "type": "string",
+          "description": "Name of cemetery"
+        },
+        "grave_plot": {
+          "type": "string",
+          "description": "Specific plot information"
+        },
+        "notes": {
+          "type": "string",
+          "description": "Additional notes about the burial"
+        },
+        "sources": {
+          "type": "array",
+          "description": "References to source documents",
+          "items": {"type": "string"}
+        }
+      }
+    },
+    "parents": {
+      "type": "array",
+      "description": "Parent information",
+      "items": {
+        "type": "object",
+        "properties": {
+          "relationship": {
+            "type": "string",
+            "enum": ["biological_mother", "biological_father", "adoptive_mother", "adoptive_father", "step_mother", "step_father", "guardian"]
+          },
+          "person_id": {
+            "type": "string",
+            "description": "Reference to the parent's person record"
+          },
+          "certainty": {
+            "type": "string",
+            "enum": ["certain", "very_likely", "likely", "uncertain"],
+            "description": "How certain we are about this relationship"
+          },
+          "sources": {
+            "type": "array",
+            "description": "References to source documents",
+            "items": {"type": "string"}
+          }
+        }
+      }
+    },
+    "siblings": {
+      "type": "array",
+      "description": "Sibling information (optional, can be derived from parents)",
+      "items": {
+        "type": "object",
+        "properties": {
+          "person_id": {
+            "type": "string",
+            "description": "Reference to the sibling's person record"
+          },
+          "relationship": {
+            "type": "string",
+            "enum": ["full_sister", "full_brother", "half_sister_maternal", "half_brother_maternal", "half_sister_paternal", "half_brother_paternal", "step_sister", "step_brother", "adoptive_sister", "adoptive_brother"]
+          },
+          "certainty": {
+            "type": "string",
+            "enum": ["certain", "very_likely", "likely", "uncertain"]
+          },
+          "sources": {
+            "type": "array",
+            "description": "References to source documents",
+            "items": {"type": "string"}
+          }
+        }
+      }
+    },
+    "spouses": {
+      "type": "array",
+      "description": "Spouse or partner information",
+      "items": {
+        "type": "object",
+        "properties": {
+          "person_id": {
+            "type": "string",
+            "description": "Reference to the spouse's person record"
+          },
+          "relationship_type": {
+            "type": "string",
+            "enum": ["spouse", "partner", "common_law", "same_sex_partner"]
+          },
+          "marriage_date": {
+            "type": "string",
+            "format": "date",
+            "description": "Marriage date in ISO 8601 format (YYYY-MM-DD)"
+          },
+          "marriage_date_range": {
+            "type": "object",
+            "properties": {
+              "start": {"type": "string", "format": "date"},
+              "end": {"type": "string", "format": "date"}
+            }
+          },
+          "marriage_location": {
+            "type": "object",
+            "description": "Marriage location information",
+            "properties": {
+              "place": {"type": "string"},
+              "city": {"type": "string"},
+              "region": {"type": "string"},
+              "country": {"type": "string"}
+            }
+          },
+          "marriage_end_date": {
+            "type": "string",
+            "format": "date",
+            "description": "Date of divorce, separation, or death in ISO 8601 format"
+          },
+          "marriage_end_reason": {
+            "type": "string",
+            "enum": ["divorce", "separation", "death", "annulment", "other"]
+          },
+          "certainty": {
+            "type": "string",
+            "enum": ["certain", "very_likely", "likely", "uncertain"]
+          },
+          "sources": {
+            "type": "array",
+            "description": "References to source documents",
+            "items": {"type": "string"}
+          }
+        }
+      }
+    },
+    "children": {
+      "type": "array",
+      "description": "Children information (optional, can be derived from parents/spouses)",
+      "items": {
+        "type": "object",
+        "properties": {
+          "person_id": {
+            "type": "string",
+            "description": "Reference to the child's person record"
+          },
+          "birth_order": {
+            "type": "integer",
+            "description": "Order of birth among siblings"
+          },
+          "mother_id": {
+            "type": "string",
+            "description": "ID of the child's mother (if different from this person and known)"
+          },
+          "father_id": {
+            "type": "string",
+            "description": "ID of the child's father (if different from this person and known)"
+          },
+          "relationship": {
+            "type": "string",
+            "enum": ["biological", "adopted", "step", "foster"]
+          },
+          "certainty": {
+            "type": "string",
+            "enum": ["certain", "very_likely", "likely", "uncertain"]
+          },
+          "sources": {
+            "type": "array",
+            "description": "References to source documents",
+            "items": {"type": "string"}
+          }
+        }
+      }
+    },
+    "occupations": {
+      "type": "array",
+      "description": "Occupation information",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "Name of occupation or job title"
+          },
+          "date_range": {
+            "type": "object",
+            "properties": {
+              "start": {"type": "string", "format": "date"},
+              "end": {"type": "string", "format": "date"}
+            }
+          },
+          "location": {
+            "type": "object",
+            "description": "Location of the occupation",
+            "properties": {
+              "place": {"type": "string"},
+              "city": {"type": "string"},
+              "region": {"type": "string"},
+              "country": {"type": "string"}
+            }
+          },
+          "employer": {
+            "type": "string",
+            "description": "Name of employer or company"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the role and responsibilities"
+          },
+          "sources": {
+            "type": "array",
+            "description": "References to source documents",
+            "items": {"type": "string"}
+          },
+          "certainty": {
+            "type": "string",
+            "enum": ["certain", "very_likely", "likely", "uncertain"]
+          }
+        }
+      }
+    },
+    "education": {
+      "type": "array",
+      "description": "Education information",
+      "items": {
+        "type": "object",
+        "properties": {
+          "institution": {
+            "type": "string",
+            "description": "Name of educational institution"
+          },
+          "degree": {
+            "type": "string",
+            "description": "Degree or certification earned"
+          },
+          "date_range": {
+            "type": "object",
+            "properties": {
+              "start": {"type": "string", "format": "date"},
+              "end": {"type": "string", "format": "date"}
+            }
+          },
+          "location": {
+            "type": "object",
+            "description": "Location of the institution",
+            "properties": {
+              "place": {"type": "string"},
+              "city": {"type": "string"},
+              "region": {"type": "string"},
+              "country": {"type": "string"}
+            }
+          },
+          "sources": {
+            "type": "array",
+            "description": "References to source documents",
+            "items": {"type": "string"}
+          },
+          "certainty": {
+            "type": "string",
+            "enum": ["certain", "very_likely", "likely", "uncertain"]
+          }
+        }
+      }
+    },
+    "military": {
+      "type": "array",
+      "description": "Military service information",
+      "items": {
+        "type": "object",
+        "properties": {
+          "branch": {
+            "type": "string",
+            "description": "Military branch or service"
+          },
+          "rank": {
+            "type": "string",
+            "description": "Military rank"
+          },
+          "unit": {
+            "type": "string",
+            "description": "Unit or division"
+          },
+          "date_range": {
+            "type": "object",
+            "properties": {
+              "start": {"type": "string", "format": "date"},
+              "end": {"type": "string", "format": "date"}
+            }
+          },
+          "service_location": {
+            "type": "string",
+            "description": "Location of service, if known"
+          },
+          "conflicts": {
+            "type": "array",
+            "description": "Wars or conflicts participated in",
+            "items": {"type": "string"}
+          },
+          "notes": {
+            "type": "string",
+            "description": "Additional notes about military service"
+          },
+          "sources": {
+            "type": "array",
+            "description": "References to source documents",
+            "items": {"type": "string"}
+          },
+          "certainty": {
+            "type": "string",
+            "enum": ["certain", "very_likely", "likely", "uncertain"]
+          }
+        }
+      }
+    },
+    "immigration": {
+      "type": "array",
+      "description": "Immigration/emigration information",
+      "items": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date",
+            "description": "Date of immigration/emigration"
+          },
+          "date_range": {
+            "type": "object",
+            "properties": {
+              "start": {"type": "string", "format": "date"},
+              "end": {"type": "string", "format": "date"}
+            }
+          },
+          "type": {
+            "type": "string",
+            "enum": ["immigration", "emigration", "passage", "naturalization"]
+          },
+          "from_location": {
+            "type": "object",
+            "description": "Origin location",
+            "properties": {
+              "place": {"type": "string"},
+              "city": {"type": "string"},
+              "region": {"type": "string"},
+              "country": {"type": "string"}
+            }
+          },
+          "to_location": {
+            "type": "object",
+            "description": "Destination location",
+            "properties": {
+              "place": {"type": "string"},
+              "city": {"type": "string"},
+              "region": {"type": "string"},
+              "country": {"type": "string"}
+            }
+          },
+          "ship": {
+            "type": "string",
+            "description": "Name of ship or vessel"
+          },
+          "reason": {
+            "type": "string",
+            "description": "Reason for migration"
+          },
+          "sources": {
+            "type": "array",
+            "description": "References to source documents",
+            "items": {"type": "string"}
+          },
+          "certainty": {
+            "type": "string",
+            "enum": ["certain", "very_likely", "likely", "uncertain"]
+          }
+        }
+      }
+    },
+    "events": {
+      "type": "array",
+      "description": "Significant life events",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": ["religious", "legal", "medical", "social", "political", "natural", "other"]
+          },
+          "event_name": {
+            "type": "string",
+            "description": "Name or description of the event"
+          },
+          "date": {
+            "type": "string",
+            "format": "date",
+            "description": "Date of the event"
+          },
+          "date_range": {
+            "type": "object",
+            "properties": {
+              "start": {"type": "string", "format": "date"},
+              "end": {"type": "string", "format": "date"}
+            }
+          },
+          "location": {
+            "type": "object",
+            "description": "Location of the event",
+            "properties": {
+              "place": {"type": "string"},
+              "city": {"type": "string"},
+              "region": {"type": "string"},
+              "country": {"type": "string"}
+            }
+          },
+          "description": {
+            "type": "string",
+            "description": "Detailed description of the event"
+          },
+          "sources": {
+            "type": "array",
+            "description": "References to source documents",
+            "items": {"type": "string"}
+          },
+          "certainty": {
+            "type": "string",
+            "enum": ["certain", "very_likely", "likely", "uncertain"]
+          }
+        }
+      }
+    },
+    "notes": {
+      "type": "string",
+      "description": "General notes about this person"
+    },
+    "portrait": {
+      "type": "string",
+      "description": "Path to portrait image file, if available"
+    },
+    "GEDCOM_id": {
+      "type": "string",
+      "description": "Corresponding ID in GEDCOM format, for compatibility"
+    },
+    "sources": {
+      "type": "array",
+      "description": "General sources for this person's information",
+      "items": {"type": "string"}
+    },
+    "remote_resources": {
+      "type": "array",
+      "description": "Links to external genealogy services and resources",
+      "items": {
+        "type": "object",
+        "required": ["resource_type", "resource_id", "url"],
+        "properties": {
+          "resource_type": {
+            "type": "string",
+            "description": "The type of resource (e.g., FamilySearch, MyHeritage, etc.)"
+          },
+          "resource_id": {
+            "type": "string",
+            "description": "The identifier of the resource"
+          },
+          "title": {
+            "type": "string",
+            "description": "The title of the resource"
+          },
+          "url": {
+            "type": "string",
+            "description": "The URL to the resource"
+          },
+          "note": {
+            "type": "string",
+            "description": "Optional notes about the resource"
+          }
+        }
+      }
+    }
+  }
+}
